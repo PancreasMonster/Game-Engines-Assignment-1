@@ -12,10 +12,10 @@ public class Spawner : MonoBehaviour {
         float gapPrev = 0;
 		for(int i = 0; i < wpNum; i++)
         {
-            float gap = Random.Range(1f, 2f);
+            float gap = Random.Range(-1.5f, 1.5f);
             gapPrev += gap;
-            GameObject Clone = Instantiate(waypoint, new Vector3(gapPrev, 0, 0), Quaternion.identity);
-            Clone.name = "Waypoint " + i;
+            GameObject Clone = Instantiate(waypoint, new Vector3(gapSize * i, gapPrev, 0), Quaternion.identity);
+            Clone.name = "Waypoint";
         }
 	}
 	

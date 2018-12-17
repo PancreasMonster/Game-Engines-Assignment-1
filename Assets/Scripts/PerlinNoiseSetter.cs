@@ -15,7 +15,7 @@ public class PerlinNoiseSetter : MonoBehaviour {
     void Start()
     {
         xScale = Random.Range(0, 15);
-        float height = Mathf.PerlinNoise(transform.position.x * xScale, 0.0f) + Mathf.PerlinNoise(transform.position.x * xScale, 0.0f);
+        float height = heightScale * Mathf.PerlinNoise(transform.position.x * xScale, 0.0f) * Mathf.PerlinNoise(transform.position.x * xScale, 0.0f);
         Vector3 pos = transform.position;
         pos.y = height;
         transform.position = pos;
