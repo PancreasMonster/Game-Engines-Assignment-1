@@ -18,7 +18,7 @@ public class RollercoasterMovement : MonoBehaviour {
     {
         
 
-       GameObject[] pointsA = GameObject.FindGameObjectsWithTag("Waypoint");
+        GameObject[] pointsA = GameObject.FindGameObjectsWithTag("Waypoint");
         points.AddRange(pointsA);
         StartCoroutine(arraySetup());
 
@@ -59,12 +59,16 @@ public class RollercoasterMovement : MonoBehaviour {
             StartCoroutine(arrayAssign());
         }
 
+        if (Vector3.Distance(transform.position, points[destPoint].transform.position) < .1f)
+        {
+            GotoNextPoint();
+        }
     }
 
-    void OnTriggerEnter(Collider other)
-    {
-        GotoNextPoint();
-    }
+    //void OnTriggerEnter(Collider other)
+   // {
+   //     GotoNextPoint();
+   // }
 
     IEnumerator arrayAssign ()
     {

@@ -15,6 +15,7 @@ public class Spawner : MonoBehaviour {
         gapPrev = 0;
 		for(int i = 0; i < wpNum; i++)
         {
+            
             float gap = Random.Range(-2.5f, 2.5f);
             pos = transform.TransformPoint(gapSize * i, gapPrev, 0);
             gapPrev += gap;
