@@ -250,55 +250,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 534669902}
   m_LocalRotation: {x: 0.16687626, y: 0.68713343, z: -0.1668763, w: 0.6871334}
-  m_LocalPosition: {x: -4.42, y: 6.72, z: 0}
+  m_LocalPosition: {x: -6.03, y: 6.72, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1430640372}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 27.301, y: 90.00001, z: 0}
---- !u!1 &635649539
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 635649541}
-  - component: {fileID: 635649540}
-  m_Layer: 0
-  m_Name: Spawner (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &635649540
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 635649539}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9c64f07e6120e94db855028b6bdc764, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wpNum: 50
-  gapSize: 3
-  waypoint: {fileID: 1320832317364810, guid: a5f24442f95f72844b0a1edc863c7b73, type: 2}
---- !u!4 &635649541
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 635649539}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 21, z: 62.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1430640367
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,7 +288,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: []
+  nextPoints: []
   speed: 20
+  destPoint: 0
   spawner: {fileID: 1250233911149818, guid: 64c65ddc315a7704aa936db3d1c6b955, type: 2}
 --- !u!65 &1430640369
 BoxCollider:
@@ -453,6 +412,17 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4824024830799340, guid: 64c65ddc315a7704aa936db3d1c6b955, type: 2}
       propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114643608432441664, guid: 64c65ddc315a7704aa936db3d1c6b955,
+        type: 2}
+      propertyPath: spawner
+      value: 
+      objectReference: {fileID: 1250233911149818, guid: 64c65ddc315a7704aa936db3d1c6b955,
+        type: 2}
+    - target: {fileID: 114643608432441664, guid: 64c65ddc315a7704aa936db3d1c6b955,
+        type: 2}
+      propertyPath: first
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
