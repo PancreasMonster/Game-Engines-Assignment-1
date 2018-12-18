@@ -5,10 +5,12 @@ using UnityEngine;
 public class RollercoasterMovement : MonoBehaviour {
 
     public GameObject[] points;
+    private GameObject[] deletablePoints;
     private Transform currentPoint;
     public float speed;
-    private int destPoint = 0;
+    public int destPoint = 0;
     public GameObject spawner;
+    private bool timeToSpawn = true;
     //GameObject 
 
 
@@ -41,10 +43,10 @@ public class RollercoasterMovement : MonoBehaviour {
 
         currentPoint = points[destPoint].transform;
 
-        if (destPoint == points.Length)
-            Instantiate(spawner, transform.position + transform.forward, Quaternion.identity);
+        
 
-        destPoint = (destPoint + 1) % points.Length;
+         destPoint = (destPoint + 1) % points.Length;
+        //destPoint += 1;
     }
 
 
@@ -55,6 +57,11 @@ public class RollercoasterMovement : MonoBehaviour {
 
         transform.position = Vector3.Lerp(transform.position, points[destPoint].transform.position, speed * Time.deltaTime);
 
+        if (destPoint == points.Length - 1 && timeToSpawn)
+        {
+            StartCoroutine(arrayAssign());
+        }
+
     }
 
     void OnTriggerEnter(Collider other)
@@ -64,11 +71,22 @@ public class RollercoasterMovement : MonoBehaviour {
 
     IEnumerator arrayAssign ()
     {
+        Debug.Log("Yes");
+        timeToSpawn = false;
+        Instantiate(spawner, transform.position + (transform.right * 150), Quaternion.identity);
         foreach (GameObject gObj in points)
+        {
+            gObj.transform.tag = ("deleteableWPs");
+        }
+        yield return new WaitForSeconds(Time.deltaTime);
+        destPoint = 0;
+        deletablePoints = GameObject.FindGameObjectsWithTag("deleteableWPs");
+        points = GameObject.FindGameObjectsWithTag("Waypoint");
+        foreach (GameObject gObj in deletablePoints)
         {
             Destroy(gObj);
         }
-        yield return new WaitForSeconds(Time.deltaTime);
-        points = GameObject.FindGameObjectsWithTag("Waypoint");
+        yield return new WaitForSeconds(1);
+        timeToSpawn = true;
     }
 }

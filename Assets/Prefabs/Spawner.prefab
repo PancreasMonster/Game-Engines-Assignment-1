@@ -51,6 +51,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9c64f07e6120e94db855028b6bdc764, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wpNum: 50
+  wpNum: 75
   gapSize: 2
   waypoint: {fileID: 1320832317364810, guid: a5f24442f95f72844b0a1edc863c7b73, type: 2}
