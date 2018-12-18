@@ -32,21 +32,6 @@ public class FlipSphereNormals : MonoBehaviour {
             mesh.SetTriangles(tris, i);
         }
 
-        
-    }
-
-    void Update()
-    {
-        if (changeColour)
-        {
-            changeColour = false;
-            StartCoroutine(ColourTransition());
-        }
-    }
-
-    IEnumerator ColourTransition()
-    {
-        
         Texture2D sphTexture = new Texture2D(xSize, ySize, TextureFormat.ARGB32, false);
 
 
@@ -63,8 +48,13 @@ public class FlipSphereNormals : MonoBehaviour {
 
         // connect texture to material of GameObject this script is attached to
         GetComponent<Renderer>().material.mainTexture = sphTexture;
-        yield return new WaitForSeconds(delay);
-        changeColour = true;
     }
+
+    void Update()
+    {
+       
+    }
+
+   
 
 }

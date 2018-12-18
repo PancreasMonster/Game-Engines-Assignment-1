@@ -269,6 +269,7 @@ GameObject:
   - component: {fileID: 1430640369}
   - component: {fileID: 1430640368}
   - component: {fileID: 1430640373}
+  - component: {fileID: 1430640374}
   m_Layer: 0
   m_Name: Coaster
   m_TagString: Untagged
@@ -379,6 +380,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1430640374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1430640367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 738a88ce6418cc346a98651d310430a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spin: 0
+  speed: 25
 --- !u!1 &1716626448
 GameObject:
   m_ObjectHideFlags: 0
@@ -612,10 +626,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1745054716}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 738a88ce6418cc346a98651d310430a5, type: 3}
+  m_Script: {fileID: 11500000, guid: 541a01ede6988da4fbddeced591d455b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spin: 1
+  spin: 0
   speed: 25
 --- !u!1001 &1929957556
 Prefab:

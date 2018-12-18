@@ -2,23 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpinningCoaster : MonoBehaviour {
+public class SpinningSkySphere : MonoBehaviour {
 
     public bool spin = false;
     public float speed;
 
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		if (Input.GetKeyDown(KeyCode.Space))
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
         {
             if (!spin)
             {
                 spin = true;
-            } else
+            }
+            else
             {
                 spin = false;
             }
@@ -27,8 +30,7 @@ public class SpinningCoaster : MonoBehaviour {
         if (spin)
         {
             transform.Rotate(Vector3.right, speed * Time.deltaTime);
-        }
-        else
+        } else
         {
             transform.Rotate(Vector3.left, speed * Time.deltaTime);
         }
