@@ -8,6 +8,7 @@ public class RollercoasterMovement : MonoBehaviour {
     private Transform currentPoint;
     public float speed;
     private int destPoint = 0;
+    public GameObject spawner;
     //GameObject 
 
 
@@ -40,6 +41,9 @@ public class RollercoasterMovement : MonoBehaviour {
 
         currentPoint = points[destPoint].transform;
 
+        if (destPoint == points.Length)
+            Instantiate(spawner, transform.position + transform.forward, Quaternion.identity);
+
         destPoint = (destPoint + 1) % points.Length;
     }
 
@@ -56,5 +60,15 @@ public class RollercoasterMovement : MonoBehaviour {
     void OnTriggerEnter(Collider other)
     {
         GotoNextPoint();
+    }
+
+    IEnumerator arrayAssign ()
+    {
+        foreach (GameObject gObj in points)
+        {
+            Destroy(gObj);
+        }
+        yield return new WaitForSeconds(Time.deltaTime);
+        points = GameObject.FindGameObjectsWithTag("Waypoint");
     }
 }
