@@ -15,9 +15,9 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
   m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_FogColor: {r: 1, g: 1, b: 1, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.01
+  m_FogDensity: 0.1
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
@@ -269,6 +269,7 @@ GameObject:
   - component: {fileID: 1430640369}
   - component: {fileID: 1430640368}
   - component: {fileID: 1430640373}
+  - component: {fileID: 1430640374}
   m_Layer: 0
   m_Name: Coaster
   m_TagString: Untagged
@@ -288,10 +289,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: []
+  deletablePoints: []
   nextPoints: []
-  speed: 20
+  speed: 50
   destPoint: 0
   spawner: {fileID: 1250233911149818, guid: 64c65ddc315a7704aa936db3d1c6b955, type: 2}
+  LM: {fileID: 2038590507}
 --- !u!65 &1430640369
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -375,6 +378,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1430640374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1430640367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 738a88ce6418cc346a98651d310430a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spin: 0
+  speed: 25
 --- !u!1001 &1929957556
 Prefab:
   m_ObjectHideFlags: 0
@@ -425,6 +441,67 @@ Prefab:
       propertyPath: first
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114643608432441664, guid: 64c65ddc315a7704aa936db3d1c6b955,
+        type: 2}
+      propertyPath: waypoint
+      value: 
+      objectReference: {fileID: 1888920051609252, guid: 8ceccf1c24391604e90929191508dfff,
+        type: 2}
+    - target: {fileID: 114643608432441664, guid: 64c65ddc315a7704aa936db3d1c6b955,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1250233911149818, guid: 64c65ddc315a7704aa936db3d1c6b955, type: 2}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 114643608432441664, guid: 64c65ddc315a7704aa936db3d1c6b955,
+        type: 2}
+      propertyPath: wpNum
+      value: 300
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64c65ddc315a7704aa936db3d1c6b955, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &2038590506
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2038590508}
+  - component: {fileID: 2038590507}
+  m_Layer: 0
+  m_Name: LineController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2038590507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2038590506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bd5c32b861413440a054a8be4c69544, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  linePoints: []
+--- !u!4 &2038590508
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2038590506}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 331.45877, y: 84.13188, z: 78.91554}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

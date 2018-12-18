@@ -5,6 +5,9 @@ using UnityEngine;
 public class LineMaker : MonoBehaviour {
 
     public List<GameObject> linePoints = new List<GameObject>();
+    Shader shaderLR;
+
+
 
     // Use this for initialization
     void Start () {
@@ -13,8 +16,8 @@ public class LineMaker : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        shaderLR = Shader.Find("UI/Default");
+    }
 
     IEnumerator startList ()
     {
@@ -25,12 +28,23 @@ public class LineMaker : MonoBehaviour {
         for (int i = 0; i < linePoints.Count; i ++)
         {
             if (i != 0) {
-                linePoints[i].AddComponent<LineRenderer>();
-                linePoints[i].GetComponent<LineRenderer>().positionCount = 2;
-                linePoints[i].GetComponent<LineRenderer>().SetPosition(0, linePoints[i].transform.position);
-                linePoints[i].GetComponent<LineRenderer>().SetPosition(1, linePoints[i-1].transform.position);
-
+                if (linePoints[i].GetComponent<LineRenderer>() == null)
+                {
+                    linePoints[i].AddComponent<LineRenderer>();
+                    linePoints[i].GetComponent<LineRenderer>().positionCount = 2;
+                    linePoints[i].GetComponent<LineRenderer>().SetPosition(0, linePoints[i].transform.position);
+                    linePoints[i].GetComponent<LineRenderer>().SetPosition(1, linePoints[i - 1].transform.position);
+                    linePoints[i].GetComponent<LineRenderer>().colorGradient.mode = GradientMode.Fixed;
+                    linePoints[i].GetComponent<LineRenderer>().material.color = Random.ColorHSV(.5f, 1, .5f, 1, .5f, 1, 1, 1);
+                    linePoints[i].GetComponent<LineRenderer>().material.shader = shaderLR;
+                }
             }
         }
+    }
+
+    public void nextSegment ()
+    {
+        linePoints.Clear();
+        StartCoroutine(startList());
     }
 }

@@ -11,6 +11,7 @@ public class RollercoasterMovement : MonoBehaviour {
     public float speed;
     public int destPoint = 0;
     public GameObject spawner;
+    public LineMaker LM;
     private bool timeToSpawn = true, firstEmbark = false; 
 
 
@@ -28,22 +29,20 @@ public class RollercoasterMovement : MonoBehaviour {
 
     void GotoNextPoint()
     {
-        // Returns if no points have been set up
         if (points.Count == 0)
             return;
 
-        // Set the agent to go to the currently selected destination.
+       
        
 
-        // Choose the next point in the array as the destination,
-        // cycling to the start if necessary.
+        
 
         currentPoint = points[destPoint].transform;
 
 
 
         destPoint = (destPoint + 1) % points.Count;
-        //destPoint += 1;
+       
     }
 
 
@@ -95,6 +94,8 @@ public class RollercoasterMovement : MonoBehaviour {
         Debug.Log(pos);
         GameObject Clone = Instantiate(spawner, new Vector3(pos.x + 2, pos.y, pos.z), Quaternion.identity);
         Clone.GetComponent<Spawner>().enabled = true;
+        yield return new WaitForSeconds(Time.deltaTime);
+        LM.nextSegment(); // calls function on line maker for the next segment of roller coaster points
         yield return new WaitForSeconds(.5f);
         timeToSpawn = true;
         firstEmbark = true;

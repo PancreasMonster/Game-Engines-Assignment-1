@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 114643608432441664}
   m_Layer: 0
   m_Name: Spawner
-  m_TagString: Untagged
+  m_TagString: deleteableWPs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51,6 +51,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9c64f07e6120e94db855028b6bdc764, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wpNum: 75
+  wpNum: 300
   gapSize: 2
-  waypoint: {fileID: 1320832317364810, guid: a5f24442f95f72844b0a1edc863c7b73, type: 2}
+  waypoint: {fileID: 1888920051609252, guid: 8ceccf1c24391604e90929191508dfff, type: 2}
+  spawner: {fileID: 1250233911149818}
+  pos: {x: 0, y: 0, z: 0}
+  currentPos: {x: 0, y: 0, z: 0}
+  test: 0
+  first: 0
