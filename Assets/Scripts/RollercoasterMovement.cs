@@ -46,6 +46,9 @@ public class RollercoasterMovement : MonoBehaviour {
 
     void Update()
     {
+        if (points.Length == 0)
+            return;
+
         transform.position = Vector3.Lerp(transform.position, points[destPoint].transform.position, speed * Time.deltaTime);
 
     }
