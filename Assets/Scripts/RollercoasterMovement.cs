@@ -11,7 +11,7 @@ public class RollercoasterMovement : MonoBehaviour {
     public float speed;
     public int destPoint = 0;
     public GameObject spawner;
-    private bool timeToSpawn = true; 
+    private bool timeToSpawn = true, firstEmbark = false; 
 
 
     void Start()
@@ -49,7 +49,7 @@ public class RollercoasterMovement : MonoBehaviour {
 
     void Update()
     {
-        if (points.Count == 0)
+        if (points.Count == 0 && !timeToSpawn)
             return;
 
         transform.position = Vector3.Lerp(transform.position, points[destPoint].transform.position, speed * Time.deltaTime);
@@ -68,9 +68,10 @@ public class RollercoasterMovement : MonoBehaviour {
 
     IEnumerator arrayAssign ()
     {
-        Debug.Log("Yes");
+        //Debug.Log("Yes");
         timeToSpawn = false;
-        
+        if (firstEmbark)
+        Destroy(GameObject.FindGameObjectWithTag("deleteableWPs"));
         deletablePoints = points;
         yield return new WaitForSeconds(Time.deltaTime);
         foreach (GameObject gObj in deletablePoints)
@@ -92,6 +93,7 @@ public class RollercoasterMovement : MonoBehaviour {
         Clone.GetComponent<Spawner>().enabled = true;
         yield return new WaitForSeconds(.5f);
         timeToSpawn = true;
+        firstEmbark = true;
     }
 
     IEnumerator arraySetup ()
