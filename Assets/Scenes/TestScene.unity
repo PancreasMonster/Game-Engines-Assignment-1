@@ -190,6 +190,60 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1031245895
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4559905159172050, guid: 69cf9416e60a5d14884c82c94e3fff19, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1189.6073
+      objectReference: {fileID: 0}
+    - target: {fileID: 4559905159172050, guid: 69cf9416e60a5d14884c82c94e3fff19, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 55.78283
+      objectReference: {fileID: 0}
+    - target: {fileID: 4559905159172050, guid: 69cf9416e60a5d14884c82c94e3fff19, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 77.15619
+      objectReference: {fileID: 0}
+    - target: {fileID: 4559905159172050, guid: 69cf9416e60a5d14884c82c94e3fff19, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4559905159172050, guid: 69cf9416e60a5d14884c82c94e3fff19, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4559905159172050, guid: 69cf9416e60a5d14884c82c94e3fff19, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4559905159172050, guid: 69cf9416e60a5d14884c82c94e3fff19, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4559905159172050, guid: 69cf9416e60a5d14884c82c94e3fff19, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114998224014780406, guid: 69cf9416e60a5d14884c82c94e3fff19,
+        type: 2}
+      propertyPath: waypoint
+      value: 
+      objectReference: {fileID: 1888920051609252, guid: 8ceccf1c24391604e90929191508dfff,
+        type: 2}
+    - target: {fileID: 114998224014780406, guid: 69cf9416e60a5d14884c82c94e3fff19,
+        type: 2}
+      propertyPath: spawner
+      value: 
+      objectReference: {fileID: 1250233911149818, guid: 64c65ddc315a7704aa936db3d1c6b955,
+        type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 69cf9416e60a5d14884c82c94e3fff19, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1001 &1076907967
 Prefab:
   m_ObjectHideFlags: 0

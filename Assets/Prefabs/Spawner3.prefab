@@ -9,53 +9,54 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1250233911149818}
+  m_RootGameObject: {fileID: 1966108598752440}
   m_IsPrefabAsset: 1
---- !u!1 &1250233911149818
+--- !u!1 &1966108598752440
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4824024830799340}
-  - component: {fileID: 114643608432441664}
+  - component: {fileID: 4559905159172050}
+  - component: {fileID: 114998224014780406}
   m_Layer: 0
-  m_Name: Spawner
+  m_Name: Spawner3
   m_TagString: deleteableWPs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4824024830799340
+--- !u!4 &4559905159172050
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1250233911149818}
+  m_GameObject: {fileID: 1966108598752440}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 21, z: 0}
+  m_LocalPosition: {x: 1189.6073, y: 55.78283, z: 77.15619}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114643608432441664
+--- !u!114 &114998224014780406
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1250233911149818}
+  m_GameObject: {fileID: 1966108598752440}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9c64f07e6120e94db855028b6bdc764, type: 3}
+  m_Script: {fileID: 11500000, guid: c922c69478514714ba810a716c8b1987, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wpNum: 150
-  gapSize: 2
-  radius: 15
+  wpNum: 300
+  gapSize: 0
+  radius: 7
+  amountOfCorkscrews: 7
   waypoint: {fileID: 1888920051609252, guid: 8ceccf1c24391604e90929191508dfff, type: 2}
-  spawner: {fileID: 1250233911149818}
+  spawner: {fileID: 1250233911149818, guid: 64c65ddc315a7704aa936db3d1c6b955, type: 2}
   pos: {x: 0, y: 0, z: 0}
   currentPos: {x: 0, y: 0, z: 0}
   test: 0

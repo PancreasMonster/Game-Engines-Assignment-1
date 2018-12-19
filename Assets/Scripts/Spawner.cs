@@ -6,7 +6,6 @@ public class Spawner : MonoBehaviour {
 
     public float wpNum, gapSize;
     float gapPrev;
-    int randomSelection = 0;
     public float radius;
     public GameObject waypoint, spawner;
     public Vector3 pos, currentPos;

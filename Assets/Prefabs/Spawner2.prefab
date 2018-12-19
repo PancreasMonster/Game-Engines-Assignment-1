@@ -51,9 +51,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd5e805473888e846a79581ca997bee2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wpNum: 300
+  wpNum: 150
   gapSize: 2
-  radius: 15
+  radius: 40
   waypoint: {fileID: 1888920051609252, guid: 8ceccf1c24391604e90929191508dfff, type: 2}
   spawner: {fileID: 1250233911149818, guid: 64c65ddc315a7704aa936db3d1c6b955, type: 2}
   pos: {x: 0, y: 0, z: 0}

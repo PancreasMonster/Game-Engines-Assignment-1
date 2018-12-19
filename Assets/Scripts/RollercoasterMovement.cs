@@ -8,12 +8,13 @@ public class RollercoasterMovement : MonoBehaviour {
     public List<GameObject> deletablePoints = new List<GameObject>();
     public List<GameObject> nextPoints = new List<GameObject>();
     private Transform currentPoint;
-    public float speed;
+    public float speed, loopRad, corkRad;
     public int destPoint = 0, lastRand;
-    public GameObject spawner, spawner2;
+    public GameObject spawner, spawner2, spawner3;
     public LineMaker LM;
     private bool timeToSpawn = true, firstEmbark = false;
     Vector3 pos;
+    float rad;
 
 
     void Start()
@@ -94,25 +95,33 @@ public class RollercoasterMovement : MonoBehaviour {
         if (lastRand == 0)
         {
             pos = GameObject.FindGameObjectWithTag("deleteableWPs").GetComponent<Spawner>().currentPos;
-        } else
+        }
+        else if (lastRand == 1)
         {
             pos = GameObject.FindGameObjectWithTag("deleteableWPs").GetComponent<Spawner2>().currentPos;
+        } else
+        {
+            pos = GameObject.FindGameObjectWithTag("deleteableWPs").GetComponent<Spawner3>().currentPos;
         }
             
         Debug.Log(pos);
-        int rand = Random.Range(0, 5);
+        int rand = Random.Range(0, 3);
         if (rand == 0)
-        {
-            
+        { 
             GameObject Clone = Instantiate(spawner, new Vector3(pos.x + 1, pos.y, pos.z), Quaternion.identity);
             Clone.GetComponent<Spawner>().enabled = true;
         }
-        else
+        else if (rand == 1)
         {
             
-            GameObject Clone = Instantiate(spawner2, new Vector3(pos.x + 1, pos.y+15, pos.z), Quaternion.identity);
+            GameObject Clone = Instantiate(spawner2, new Vector3(pos.x + 1, pos.y + loopRad, pos.z), Quaternion.identity);
             Clone.GetComponent<Spawner2>().enabled = true;
-        }  
+        }  else
+        {
+           
+            GameObject Clone = Instantiate(spawner3, new Vector3(pos.x + 1, pos.y, pos.z - corkRad), Quaternion.identity);
+            Clone.GetComponent<Spawner3>().enabled = true;
+        }
         yield return new WaitForSeconds(Time.deltaTime);
         LM.nextSegment(); // calls function on line maker for the next segment of roller coaster points
         lastRand = rand;
@@ -126,4 +135,5 @@ public class RollercoasterMovement : MonoBehaviour {
         yield return new WaitForSeconds(Time.deltaTime);
         nextPoints.AddRange(GameObject.FindGameObjectsWithTag("nextPoint"));
     }
+
 }
