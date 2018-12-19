@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 114217556542582224}
   m_Layer: 0
   m_Name: Spawner4
-  m_TagString: Untagged
+  m_TagString: deleteableWPs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -55,8 +55,8 @@ MonoBehaviour:
   gapSize: 0
   radius: 8
   amountOfCorkscrews: 8
-  waypoint: {fileID: 1320832317364810, guid: a5f24442f95f72844b0a1edc863c7b73, type: 2}
-  spawner: {fileID: 0}
+  waypoint: {fileID: 1888920051609252, guid: 8ceccf1c24391604e90929191508dfff, type: 2}
+  spawner: {fileID: 1250233911149818, guid: 64c65ddc315a7704aa936db3d1c6b955, type: 2}
   pos: {x: 0, y: 0, z: 0}
   currentPos: {x: 0, y: 0, z: 0}
   test: 0
