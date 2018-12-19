@@ -35,7 +35,7 @@ public class RollercoasterMovement : MonoBehaviour {
 
        Vector3 tempPos = points[destPoint+1].transform.position - transform.position;
 
-        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(tempPos), .75f);
+        //transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(tempPos), .75f);
 
 
         currentPoint = points[destPoint].transform;
