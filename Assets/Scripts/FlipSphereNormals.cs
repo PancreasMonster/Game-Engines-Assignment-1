@@ -39,7 +39,7 @@ public class FlipSphereNormals : MonoBehaviour {
         {
             for (int y = 0; y < ySize; y++)
             {
-                sphTexture.SetPixel(x, y, Random.ColorHSV(.5f, 1, .5f, 1, .5f, 1, 1, 1));
+                sphTexture.SetPixel(x, y, Random.ColorHSV(.1f, 1, 1f, 1, .5f, 1, 1, 1));
             }
         }
 

@@ -63,6 +63,7 @@ public class WaypointScripter : MonoBehaviour {
     {
         yield return new WaitForSeconds(.5f);
         LR = GetComponent<LineRenderer>();
+        if (LR != null)
         StartCoroutine(FadeInLR());
     }
 }

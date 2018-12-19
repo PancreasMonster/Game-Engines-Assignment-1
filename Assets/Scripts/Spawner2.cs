@@ -25,6 +25,7 @@ public class Spawner2 : MonoBehaviour {
             if (first)
             Clone.transform.tag = ("Waypoint");
             Clone.name = "Waypoint " + i;
+            Clone.GetComponent<LineBeat>().AssignBandNum(Mathf.CeilToInt(i * (512 / wpNum)));
             currentPos = Clone.transform.position;
             if (first && i == wpNum - 1)
             {
