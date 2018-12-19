@@ -16,7 +16,7 @@ public class SphereBeat : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.localScale = new Vector3(1 + (maxScale * SD.audSamples[5]), 1 + (maxScale * SD.audSamples[5]), 1 + (maxScale * SD.audSamples[5]));
+        transform.localScale = new Vector3(1 + (maxScale * SD.audSamples[5]), 1 + (maxScale * SD.audSamples[5]), 1 + (maxScale * SD.audSamples[5])); //makes it so the sphere beats to its appropiate band number
         test = maxScale * SD.audSamples[5];
 
     }

@@ -20,7 +20,7 @@ public class Spawner : MonoBehaviour {
         for (int i = 0; i < wpNum; i++)
         {
 
-            float gap = Random.Range(-2.5f, 2.5f);
+            float gap = Random.Range(-2.5f, 2.5f); // makes a zig zag shape
             pos = transform.TransformPoint(gapSize * i, gapPrev, 0);
             gapPrev += gap;
             GameObject Clone = Instantiate(waypoint, pos, Quaternion.identity);

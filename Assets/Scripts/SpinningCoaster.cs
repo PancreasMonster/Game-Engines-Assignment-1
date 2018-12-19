@@ -26,7 +26,7 @@ public class SpinningCoaster : MonoBehaviour {
 
         if (spin)
         {
-            transform.Rotate(Vector3.right, speed * Time.deltaTime);
+            transform.Rotate(Vector3.right, speed * Time.deltaTime); //rotates the coaster one of two ways
         }
         else
         {

@@ -19,6 +19,6 @@ public class SpectrumData : MonoBehaviour {
 
     void GetSpectrum()
     {
-        aud.GetSpectrumData(audSamples, 0, FFTWindow.Blackman);
+        aud.GetSpectrumData(audSamples, 0, FFTWindow.Blackman); // collects samples from the audio source
     }
 }

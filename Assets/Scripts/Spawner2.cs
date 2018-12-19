@@ -5,7 +5,6 @@ using UnityEngine;
 public class Spawner2 : MonoBehaviour {
 
     float wpNum, gapSize;
-    float gapPrev;
     float radius;
     public GameObject waypoint, spawner;
     public Vector3 pos, currentPos;
@@ -14,7 +13,6 @@ public class Spawner2 : MonoBehaviour {
     // Use this for initialization
     void OnEnable()
     {
-        gapPrev = 0;
 
         wpNum = GameObject.FindGameObjectWithTag("Master").GetComponent<MasterScript>().loopLenght;
         radius = GameObject.FindGameObjectWithTag("Master").GetComponent<MasterScript>().loopRadius;
@@ -22,9 +20,8 @@ public class Spawner2 : MonoBehaviour {
         for (int i = 0; i < wpNum; i++)
         {
 
-            float gap = Random.Range(-2.5f, 2.5f);
-            pos = transform.TransformPoint(radius * Mathf.Sin(i*2*Mathf.PI/wpNum), -radius * Mathf.Cos(i * 2 * Mathf.PI / wpNum), i * .1f);
-            gapPrev += gap;
+            
+            pos = transform.TransformPoint(radius * Mathf.Sin(i*2*Mathf.PI/wpNum), -radius * Mathf.Cos(i * 2 * Mathf.PI / wpNum), i * .1f); //makes a loop shape
             GameObject Clone = Instantiate(waypoint, pos, Quaternion.identity);
             if (first)
             Clone.transform.tag = ("Waypoint");
@@ -40,10 +37,6 @@ public class Spawner2 : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update()
-    {
-
-    }
 
     public Vector3 GetPos(Vector3 pos)
     {

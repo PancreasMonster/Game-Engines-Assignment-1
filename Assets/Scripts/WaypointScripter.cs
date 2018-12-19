@@ -8,7 +8,6 @@ public class WaypointScripter : MonoBehaviour {
     bool fadeIn, fadeOut;
     public float fadeOver;
     float SecondsToFade = 8;
-    public Color col;
 
 	// Use this for initialization
 	void Start () {

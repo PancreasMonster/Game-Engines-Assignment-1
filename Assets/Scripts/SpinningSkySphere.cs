@@ -5,7 +5,7 @@ using UnityEngine;
 public class SpinningSkySphere : MonoBehaviour {
 
     public bool spin = false;
-    public float speed;
+    public float speed; 
 
     void Start()
     {
@@ -29,7 +29,7 @@ public class SpinningSkySphere : MonoBehaviour {
 
         if (spin)
         {
-            transform.Rotate(Vector3.right, speed * Time.deltaTime);
+            transform.Rotate(Vector3.right, speed * Time.deltaTime); //rotates the sky sphere one of two ways
         } else
         {
             transform.Rotate(Vector3.left, speed * Time.deltaTime);

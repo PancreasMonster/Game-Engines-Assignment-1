@@ -17,7 +17,7 @@ public class CameraLerp : MonoBehaviour {
         Vector3 targetPos = lookAtTarget.position - transform.position;
 
         transform.position = Vector3.Lerp(transform.position, target.position, speed * Time.deltaTime);
-        //transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(targetPos), speed * Time.deltaTime);
+        //transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(targetPos), speed * Time.deltaTime); // simple camera lerp. this script and some methods are disabled as I feel they are better without it
 	}
 }
 

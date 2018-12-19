@@ -24,7 +24,7 @@ public class LineBeat : MonoBehaviour {
     {
         if (LR != null && start)
         {
-            LR.endWidth = .5f + (maxScale * SD.audSamples[bandNum]);
+            LR.endWidth = .5f + (maxScale * SD.audSamples[bandNum]); //makes it so each line segment beats to its appropiate band number
             LR.startWidth = .5f + (maxScale * SD.audSamples[bandNum]);
         }
     }
