@@ -100,7 +100,7 @@ public class RollercoasterMovement : MonoBehaviour {
         }
             
         Debug.Log(pos);
-        int rand = Random.Range(0, 2);
+        int rand = Random.Range(0, 5);
         if (rand == 0)
         {
             
