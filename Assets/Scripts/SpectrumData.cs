@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SpectrumData : MonoBehaviour {
 
+    AudioSource aud;
 	// Use this for initialization
 	void Start () {
 		
