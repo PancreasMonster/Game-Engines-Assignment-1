@@ -20,3 +20,5 @@ public class CameraLerp : MonoBehaviour {
         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(targetPos), speed * Time.deltaTime);
 	}
 }
+
+

@@ -53,6 +53,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wpNum: 300
   gapSize: 2
+  radius: 15
   waypoint: {fileID: 1888920051609252, guid: 8ceccf1c24391604e90929191508dfff, type: 2}
   spawner: {fileID: 1250233911149818}
   pos: {x: 0, y: 0, z: 0}
