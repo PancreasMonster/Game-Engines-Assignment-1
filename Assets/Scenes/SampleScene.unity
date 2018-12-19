@@ -724,8 +724,8 @@ MonoBehaviour:
   loopLenght: 392
   corkscrewLenght: 430
   figureEightLenght: 444
-  corkscrewRadius: 10
-  corkscrewNum: 8.2
+  corkscrewRadius: 7.38
+  corkscrewNum: 5.94
   figureEightRadius: 9.59
   figureEightNum: 8.2
   loopRadius: 42.7
