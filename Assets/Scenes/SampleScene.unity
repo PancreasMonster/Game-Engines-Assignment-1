@@ -724,11 +724,11 @@ MonoBehaviour:
   loopLenght: 392
   corkscrewLenght: 430
   figureEightLenght: 444
-  loopRadius: 24.5
-  corkscrewRadius: 12.1
+  corkscrewRadius: 10
   corkscrewNum: 8.2
-  figureEightRadius: 10.1
+  figureEightRadius: 9.59
   figureEightNum: 8.2
+  loopRadius: 42.7
 --- !u!4 &1011705672
 Transform:
   m_ObjectHideFlags: 0
@@ -775,7 +775,7 @@ MonoBehaviour:
   points: []
   deletablePoints: []
   nextPoints: []
-  speed: 50
+  speed: 37.5
   destPoint: 0
   lastRand: 0
   spawner: {fileID: 1250233911149818, guid: 64c65ddc315a7704aa936db3d1c6b955, type: 2}

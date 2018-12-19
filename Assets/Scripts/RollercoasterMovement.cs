@@ -8,6 +8,7 @@ public class RollercoasterMovement : MonoBehaviour {
     public List<GameObject> deletablePoints = new List<GameObject>();
     public List<GameObject> nextPoints = new List<GameObject>();
     private Transform currentPoint;
+    [Range (0,75)]
     public float speed;
     float loopRad, corkRad, eightLoop;
     public int destPoint = 0, lastRand;
