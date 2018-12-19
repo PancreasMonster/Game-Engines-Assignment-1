@@ -555,7 +555,7 @@ GameObject:
   - component: {fileID: 1745054718}
   - component: {fileID: 1745054722}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: SkySphrere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
