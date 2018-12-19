@@ -7,7 +7,7 @@ public class WaypointScripter : MonoBehaviour {
     public LineRenderer LR;
     bool fadeIn, fadeOut;
     public float fadeOver;
-    public float SecondsToFade = 4;
+    float SecondsToFade = 8;
     public Color col;
 
 	// Use this for initialization
@@ -30,7 +30,7 @@ public class WaypointScripter : MonoBehaviour {
     IEnumerator FadeInLR()
     {
 
-        float rate = 1.0f / SecondsToFade;
+        float rate = 1.0f / (SecondsToFade/3);
 
         for (float x = 0.0f; x <= 1.0f; x += Time.deltaTime * rate)
         {

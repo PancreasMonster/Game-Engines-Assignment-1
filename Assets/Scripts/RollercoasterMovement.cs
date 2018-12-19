@@ -8,19 +8,21 @@ public class RollercoasterMovement : MonoBehaviour {
     public List<GameObject> deletablePoints = new List<GameObject>();
     public List<GameObject> nextPoints = new List<GameObject>();
     private Transform currentPoint;
-    public float speed, loopRad, corkRad, eightLoop;
+    public float speed;
+    float loopRad, corkRad, eightLoop;
     public int destPoint = 0, lastRand;
     public GameObject spawner, spawner2, spawner3, spawner4;
     public LineMaker LM;
     private bool timeToSpawn = true, firstEmbark = false;
     Vector3 pos;
     float rad;
+    MasterScript MS;
 
 
     void Start()
     {
-        
 
+        MS = GameObject.FindGameObjectWithTag("Master").GetComponent<MasterScript>();
         GameObject[] pointsA = GameObject.FindGameObjectsWithTag("Waypoint");
         points.AddRange(pointsA);
         StartCoroutine(arraySetup());
@@ -50,6 +52,10 @@ public class RollercoasterMovement : MonoBehaviour {
 
     void Update()
     {
+        loopRad = MS.loopRadius;
+        corkRad = MS.corkscrewRadius;
+        eightLoop = MS.figureEightRadius;
+
         if (points.Count == 0 && !timeToSpawn)
             return;
 
@@ -123,7 +129,7 @@ public class RollercoasterMovement : MonoBehaviour {
             Clone.GetComponent<Spawner3>().enabled = true;
         } else
         {
-            GameObject Clone = Instantiate(spawner4, new Vector3(pos.x + 1, pos.y, pos.z - eightLoop), Quaternion.identity);
+            GameObject Clone = Instantiate(spawner4, new Vector3(pos.x + 1, pos.y, pos.z + eightLoop), Quaternion.identity);
             Clone.GetComponent<Spawner4>().enabled = true;
         }
         yield return new WaitForSeconds(Time.deltaTime);

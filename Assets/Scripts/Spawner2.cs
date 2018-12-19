@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Spawner2 : MonoBehaviour {
 
-    public float wpNum, gapSize;
+    float wpNum, gapSize;
     float gapPrev;
-    public float radius;
+    float radius;
     public GameObject waypoint, spawner;
     public Vector3 pos, currentPos;
     public bool test, first;
@@ -15,6 +15,10 @@ public class Spawner2 : MonoBehaviour {
     void OnEnable()
     {
         gapPrev = 0;
+
+        wpNum = GameObject.FindGameObjectWithTag("Master").GetComponent<MasterScript>().loopLenght;
+        radius = GameObject.FindGameObjectWithTag("Master").GetComponent<MasterScript>().loopRadius;
+
         for (int i = 0; i < wpNum; i++)
         {
 

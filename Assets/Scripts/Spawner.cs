@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour {
 
-    public float wpNum, gapSize;
+    float wpNum, gapSize = 2;
     float gapPrev;
     public float radius;
     public GameObject waypoint, spawner;
@@ -14,8 +14,9 @@ public class Spawner : MonoBehaviour {
 	// Use this for initialization
 	void OnEnable () {
         gapPrev = 0;
-       
-       
+
+        wpNum = GameObject.FindGameObjectWithTag("Master").GetComponent<MasterScript>().zigZagLenght;
+
         for (int i = 0; i < wpNum; i++)
         {
 

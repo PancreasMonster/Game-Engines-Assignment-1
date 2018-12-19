@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Spawner3 : MonoBehaviour {
 
-    public float wpNum, gapSize;
+    float wpNum, gapSize;
     float gapPrev;
-    public float radius, amountOfCorkscrews;
+    float radius, amountOfCorkscrews;
     public GameObject waypoint, spawner;
     public Vector3 pos, currentPos;
     public bool test, first;
@@ -15,6 +15,11 @@ public class Spawner3 : MonoBehaviour {
     void OnEnable()
     {
         gapPrev = 0;
+
+        wpNum = GameObject.FindGameObjectWithTag("Master").GetComponent<MasterScript>().corkscrewLenght;
+        radius = GameObject.FindGameObjectWithTag("Master").GetComponent<MasterScript>().corkscrewRadius;
+        amountOfCorkscrews = GameObject.FindGameObjectWithTag("Master").GetComponent<MasterScript>().corkscrewNum;
+
         for (int i = 0; i < wpNum; i++)
         {
 

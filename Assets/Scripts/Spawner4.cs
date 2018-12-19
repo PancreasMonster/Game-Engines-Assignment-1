@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Spawner4 : MonoBehaviour {
 
-    public float wpNum, gapSize;
+    float wpNum, gapSize;
     float gapPrev;
-    public float radius, amountOfCorkscrews;
+    float radius, amountOfCorkscrews;
     public GameObject waypoint, spawner;
     public Vector3 pos, currentPos;
     public bool test, first;
@@ -15,11 +15,16 @@ public class Spawner4 : MonoBehaviour {
     void OnEnable()
     {
         gapPrev = 0;
+
+        wpNum = GameObject.FindGameObjectWithTag("Master").GetComponent<MasterScript>().figureEightLenght;
+        radius = GameObject.FindGameObjectWithTag("Master").GetComponent<MasterScript>().figureEightRadius;
+        amountOfCorkscrews = GameObject.FindGameObjectWithTag("Master").GetComponent<MasterScript>().figureEightNum;
+
         for (int i = 0; i < wpNum; i++)
         {
             float scale = 2 / (3 - Mathf.Cos(2 * i));
             float gap = Random.Range(-2.5f, 2.5f);
-            pos = transform.TransformPoint(i * 2, radius * Mathf.Sin(i * amountOfCorkscrews * Mathf.PI / wpNum), radius * Mathf.Cos(i * amountOfCorkscrews * 2 * Mathf.PI / (wpNum/2)) / 2);
+            pos = transform.TransformPoint(i * 2, radius * Mathf.Sin(i * amountOfCorkscrews * Mathf.PI / wpNum), -radius * Mathf.Cos(i * amountOfCorkscrews * 2 * Mathf.PI / (wpNum/2)) / 2);
             gapPrev += gap;
             GameObject Clone = Instantiate(waypoint, pos, Quaternion.identity);
             if (first)

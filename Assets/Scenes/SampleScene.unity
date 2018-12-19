@@ -693,6 +693,55 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ad6e4167cdc6ee469c5151e3fe86a7f, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1011705670
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1011705672}
+  - component: {fileID: 1011705671}
+  m_Layer: 0
+  m_Name: MasterController
+  m_TagString: Master
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1011705671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1011705670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6bf6ccc117f574a9775b645eaf8d52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zigZagLenght: 77
+  loopLenght: 392
+  corkscrewLenght: 430
+  figureEightLenght: 444
+  loopRadius: 24.5
+  corkscrewRadius: 12.1
+  corkscrewNum: 8.2
+  figureEightRadius: 10.1
+  figureEightNum: 8.2
+--- !u!4 &1011705672
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1011705670}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1430640367
 GameObject:
   m_ObjectHideFlags: 0
@@ -727,9 +776,6 @@ MonoBehaviour:
   deletablePoints: []
   nextPoints: []
   speed: 50
-  loopRad: 40
-  corkRad: 7
-  eightLoop: 8
   destPoint: 0
   lastRand: 0
   spawner: {fileID: 1250233911149818, guid: 64c65ddc315a7704aa936db3d1c6b955, type: 2}
