@@ -15,8 +15,8 @@ public class Spawner : MonoBehaviour {
 	// Use this for initialization
 	void OnEnable () {
         gapPrev = 0;
-        if (first)
-        randomSelection = Random.Range(0, 1);
+        if (!first)
+        randomSelection = Random.Range(0, 2);
         if (randomSelection == 0)
         {
             for (int i = 0; i < wpNum; i++)
@@ -36,7 +36,7 @@ public class Spawner : MonoBehaviour {
                     Spawner1.GetComponent<Spawner>().enabled = true;
                 }
             }
-        }
+        } else 
         {
             for (int i = 0; i < wpNum; i++)
             {
