@@ -22,6 +22,7 @@ public class WaypointScripter : MonoBehaviour {
 
     public void endFade()
     {
+        if (LR != null)
         StartCoroutine(FadeOutLR());
         StartCoroutine(DestroyLines());
     }
