@@ -12,22 +12,17 @@ public class WaypointScripter : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        StartCoroutine(InitialiseLineRenderer());
+        StartCoroutine(InitialiseLineRenderer()); // a courountine assigns the line renderer as it takes a second to instantiate onto the object
     }
 
-    // Update is called once per frame
-    void Update() {
-        
-    }
-
-    public void endFade()
+    public void endFade()  // this is called when the coaster passes the segment. fades out the lines then deletes them
     {
         if (LR != null)
         StartCoroutine(FadeOutLR());
-        StartCoroutine(DestroyLines());
+        StartCoroutine(DestroyLines()); 
     }
 
-    IEnumerator FadeInLR()
+    IEnumerator FadeInLR() // fades the lines into the scene
     {
 
         float rate = 1.0f / (SecondsToFade/3);
@@ -40,7 +35,7 @@ public class WaypointScripter : MonoBehaviour {
 
     }
 
-    IEnumerator FadeOutLR()
+    IEnumerator FadeOutLR() //fades the lines out of the scene
     {
 
         float rate = 1.0f / SecondsToFade;
@@ -53,14 +48,14 @@ public class WaypointScripter : MonoBehaviour {
         
     }
 
-    IEnumerator DestroyLines()
+    IEnumerator DestroyLines() //destroys this object
     {
         yield return new WaitForSeconds(SecondsToFade);
         Destroy(this.gameObject);
     }
 
 
-    IEnumerator InitialiseLineRenderer()
+    IEnumerator InitialiseLineRenderer() //sets LR to the Line Renderer present
     {
         yield return new WaitForSeconds(.5f);
         LR = GetComponent<LineRenderer>();
