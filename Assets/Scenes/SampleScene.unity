@@ -308,7 +308,9 @@ MonoBehaviour:
   nextPoints: []
   speed: 50
   destPoint: 0
+  lastRand: 0
   spawner: {fileID: 1250233911149818, guid: 64c65ddc315a7704aa936db3d1c6b955, type: 2}
+  spawner2: {fileID: 1838383464822546, guid: e8af8fef45d80c24ca60993089b87dd1, type: 2}
   LM: {fileID: 2038590507}
 --- !u!65 &1430640369
 BoxCollider:

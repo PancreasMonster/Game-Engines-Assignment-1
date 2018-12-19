@@ -19,16 +19,16 @@ public class Spawner2 : MonoBehaviour {
         {
 
             float gap = Random.Range(-2.5f, 2.5f);
-            pos = transform.TransformPoint(radius * Mathf.Sin(i*2*Mathf.PI/wpNum), radius * Mathf.Cos(i * 2 * Mathf.PI / wpNum), i * .25f);
+            pos = transform.TransformPoint(radius * Mathf.Sin(i*2*Mathf.PI/wpNum), -radius * Mathf.Cos(i * 2 * Mathf.PI / wpNum), i * .1f);
             gapPrev += gap;
             GameObject Clone = Instantiate(waypoint, pos, Quaternion.identity);
             if (first)
-                Clone.transform.tag = ("Waypoint");
+            Clone.transform.tag = ("Waypoint");
             Clone.name = "Waypoint " + i;
             currentPos = Clone.transform.position;
             if (first && i == wpNum - 1)
             {
-                GameObject Spawner1 = Instantiate(spawner, new Vector3(pos.x + gapSize, pos.y, pos.z), Quaternion.identity);
+                GameObject Spawner1 = Instantiate(spawner, new Vector3(pos.x + 1, pos.y+radius, pos.z), Quaternion.identity);
                 Spawner1.GetComponent<Spawner>().enabled = true;
             }
         }

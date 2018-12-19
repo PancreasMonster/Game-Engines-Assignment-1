@@ -9,10 +9,11 @@ public class RollercoasterMovement : MonoBehaviour {
     public List<GameObject> nextPoints = new List<GameObject>();
     private Transform currentPoint;
     public float speed;
-    public int destPoint = 0;
-    public GameObject spawner;
+    public int destPoint = 0, lastRand;
+    public GameObject spawner, spawner2;
     public LineMaker LM;
-    private bool timeToSpawn = true, firstEmbark = false; 
+    private bool timeToSpawn = true, firstEmbark = false;
+    Vector3 pos;
 
 
     void Start()
@@ -90,12 +91,31 @@ public class RollercoasterMovement : MonoBehaviour {
         nextPoints.AddRange(GameObject.FindGameObjectsWithTag("nextPoint"));
         destPoint = 0;
         yield return new WaitForSeconds(Time.deltaTime);
-        Vector3 pos = GameObject.FindGameObjectWithTag("deleteableWPs").GetComponent<Spawner>().currentPos;
+        if (lastRand == 0)
+        {
+            pos = GameObject.FindGameObjectWithTag("deleteableWPs").GetComponent<Spawner>().currentPos;
+        } else
+        {
+            pos = GameObject.FindGameObjectWithTag("deleteableWPs").GetComponent<Spawner2>().currentPos;
+        }
+            
         Debug.Log(pos);
-        GameObject Clone = Instantiate(spawner, new Vector3(pos.x + 2, pos.y, pos.z), Quaternion.identity);
-        Clone.GetComponent<Spawner>().enabled = true;
+        int rand = Random.Range(0, 2);
+        if (rand == 0)
+        {
+            
+            GameObject Clone = Instantiate(spawner, new Vector3(pos.x + 1, pos.y, pos.z), Quaternion.identity);
+            Clone.GetComponent<Spawner>().enabled = true;
+        }
+        else
+        {
+            
+            GameObject Clone = Instantiate(spawner2, new Vector3(pos.x + 1, pos.y+15, pos.z), Quaternion.identity);
+            Clone.GetComponent<Spawner2>().enabled = true;
+        }  
         yield return new WaitForSeconds(Time.deltaTime);
         LM.nextSegment(); // calls function on line maker for the next segment of roller coaster points
+        lastRand = rand;
         yield return new WaitForSeconds(.5f);
         timeToSpawn = true;
         firstEmbark = true;
