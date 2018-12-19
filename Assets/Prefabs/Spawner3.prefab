@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c922c69478514714ba810a716c8b1987, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wpNum: 300
+  wpNum: 540
   gapSize: 0
   radius: 7
   amountOfCorkscrews: 7

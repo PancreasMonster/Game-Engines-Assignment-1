@@ -8,6 +8,7 @@ TagManager:
   - deleteableWPs
   - nextWaypoint
   - nextPoint
+  - SpectrumData
   layers:
   - Default
   - TransparentFX

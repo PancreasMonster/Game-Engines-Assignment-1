@@ -352,7 +352,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 534669902}
   m_LocalRotation: {x: 0.30203837, y: 0.32866374, z: -0.11181021, w: 0.88783526}
-  m_LocalPosition: {x: -12.7, y: 23.090002, z: -11.4}
+  m_LocalPosition: {x: -13.87, y: 23.090002, z: -15.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1430640372}
@@ -822,7 +822,7 @@ GameObject:
   - component: {fileID: 1716626451}
   m_Layer: 0
   m_Name: Justice - D.A.N.C.E. -
-  m_TagString: Untagged
+  m_TagString: SpectrumData
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1584,6 +1584,7 @@ GameObject:
   - component: {fileID: 1801298384}
   - component: {fileID: 1801298383}
   - component: {fileID: 1801298382}
+  - component: {fileID: 1801298385}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -1658,6 +1659,20 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1801298380}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1801298385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1801298380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27bd9812fdd637f47b4ef0c6da7d6b5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SD: {fileID: 1716626451}
+  maxScale: 60
+  test: 0
 --- !u!1001 &1929957556
 Prefab:
   m_ObjectHideFlags: 0
