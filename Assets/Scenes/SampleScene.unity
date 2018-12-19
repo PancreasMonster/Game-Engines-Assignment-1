@@ -268,9 +268,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80bac92134c28b548a734cb4c728c269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 2126641623}
-  lookAtTarget: {fileID: 1430640372}
-  speed: 5
+  target: {fileID: 0}
+  lookAtTarget: {fileID: 0}
+  speed: 0
 --- !u!1 &1430640367
 GameObject:
   m_ObjectHideFlags: 0
@@ -416,7 +416,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spin: 0
-  speed: 25
+  speed: 40
 --- !u!1 &1716626448
 GameObject:
   m_ObjectHideFlags: 0
@@ -587,7 +587,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xSize: 2048
   ySize: 2048
-  delay: 1000
+  delay: 0
 --- !u!135 &1745054719
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -654,7 +654,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spin: 0
-  speed: 25
+  speed: 40
 --- !u!1001 &1929957556
 Prefab:
   m_ObjectHideFlags: 0

@@ -78,7 +78,8 @@ public class RollercoasterMovement : MonoBehaviour {
         yield return new WaitForSeconds(Time.deltaTime);
         foreach (GameObject gObj in deletablePoints)
         {
-            Destroy(gObj);
+            gObj.GetComponent<WaypointScripter>().endFade();
+            gObj.transform.tag = ("Untagged");
         }
         yield return new WaitForSeconds(Time.deltaTime);
         points.Clear();

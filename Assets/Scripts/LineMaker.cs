@@ -35,7 +35,7 @@ public class LineMaker : MonoBehaviour {
                     linePoints[i].GetComponent<LineRenderer>().SetPosition(0, linePoints[i].transform.position);
                     linePoints[i].GetComponent<LineRenderer>().SetPosition(1, linePoints[i - 1].transform.position);
                     linePoints[i].GetComponent<LineRenderer>().colorGradient.mode = GradientMode.Fixed;
-                    linePoints[i].GetComponent<LineRenderer>().material.color = Random.ColorHSV(.5f, 1, .5f, 1, .5f, 1, 1, 1);
+                    linePoints[i].GetComponent<LineRenderer>().material.color = Random.ColorHSV(.5f, 1, .5f, 1, .5f, 1, 0, 0);
                     linePoints[i].GetComponent<LineRenderer>().material.shader = shaderLR;
                     linePoints[i].GetComponent<LineRenderer>().endWidth = .5f;
                     linePoints[i].GetComponent<LineRenderer>().startWidth = .5f;
