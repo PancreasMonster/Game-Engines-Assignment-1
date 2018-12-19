@@ -11,14 +11,6 @@ public class MasterScript : MonoBehaviour {
     [Range(0, 50)]
     public float loopRadius;
 
-    void Start()
-    {
+   // connects to all the spawners and ensures a proper build of the procedural rollercoaster
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }
