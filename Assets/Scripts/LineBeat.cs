@@ -6,7 +6,7 @@ public class LineBeat : MonoBehaviour {
 
     public SpectrumData SD;
     LineRenderer LR;
-    float maxScale = 250;
+    float maxScale = 100;
     public int bandNum; 
     bool start = false;
 

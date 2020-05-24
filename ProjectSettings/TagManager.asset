@@ -10,6 +10,7 @@ TagManager:
   - nextPoint
   - SpectrumData
   - Master
+  - Fading
   layers:
   - Default
   - TransparentFX

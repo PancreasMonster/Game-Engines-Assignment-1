@@ -127,6 +127,39 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 820603480}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &60837438 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1523978584962194, guid: 4ad6e4167cdc6ee469c5151e3fe86a7f,
+    type: 3}
+  m_PrefabInstance: {fileID: 148803234}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &60837439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 60837438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cde7d3804066a764fad44f58014c0e78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SD: {fileID: 1716626451}
+  bandNum: 1
+  initialGlow: 0.5
+  glowAmplitude: 0.5
+  origMatColor: {r: 1, g: 0, b: 0, a: 1}
+  matColor: {r: 0, g: 0, b: 0, a: 0}
+  baseColorValueFadeSpeed: 20
+  colors:
+  - {r: 1, g: 0, b: 0, a: 1}
+  - {r: 0.3915094, g: 1, b: 0.39802155, a: 1}
+  - {r: 0.4292453, g: 0.5974941, b: 1, a: 1}
+  - {r: 0.78821295, g: 0.4481132, b: 1, a: 1}
+  - {r: 0.987248, g: 1, b: 0.4198113, a: 1}
+  currentIndex: 0
+  changeColourTime: 5
 --- !u!1001 &148803234
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -164,7 +197,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4031137260371176, guid: 4ad6e4167cdc6ee469c5151e3fe86a7f, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4031137260371176, guid: 4ad6e4167cdc6ee469c5151e3fe86a7f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -330,6 +363,39 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 148803234}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &420418754 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1523978584962194, guid: 4ad6e4167cdc6ee469c5151e3fe86a7f,
+    type: 3}
+  m_PrefabInstance: {fileID: 820603480}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &420418755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 420418754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cde7d3804066a764fad44f58014c0e78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SD: {fileID: 1716626451}
+  bandNum: 1
+  initialGlow: 0.5
+  glowAmplitude: 0.5
+  origMatColor: {r: 1, g: 0, b: 0, a: 1}
+  matColor: {r: 0, g: 0, b: 0, a: 0}
+  baseColorValueFadeSpeed: 20
+  colors:
+  - {r: 1, g: 0, b: 0, a: 1}
+  - {r: 0.3915094, g: 1, b: 0.39802155, a: 1}
+  - {r: 0.4292453, g: 0.5974941, b: 1, a: 1}
+  - {r: 0.78821295, g: 0.4481132, b: 1, a: 1}
+  - {r: 0.987248, g: 1, b: 0.4198113, a: 1}
+  currentIndex: 4
+  changeColourTime: 5
 --- !u!1 &534669902
 GameObject:
   m_ObjectHideFlags: 0
@@ -410,11 +476,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
   m_LocalRotation: {x: 0.30203837, y: 0.32866374, z: -0.11181021, w: 0.88783526}
-  m_LocalPosition: {x: -13.87, y: 23.090002, z: -15.04}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 15.221218, y: 31.581947, z: -10.9784355}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
-  m_Father: {fileID: 1430640372}
-  m_RootOrder: 3
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 37.576, y: 40.628002, z: 0}
 --- !u!114 &534669906
 MonoBehaviour:
@@ -508,6 +574,39 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   priority: 0
+--- !u!1 &670491310 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1523978584962194, guid: 4ad6e4167cdc6ee469c5151e3fe86a7f,
+    type: 3}
+  m_PrefabInstance: {fileID: 2045453796}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &670491311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 670491310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cde7d3804066a764fad44f58014c0e78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SD: {fileID: 1716626451}
+  bandNum: 1
+  initialGlow: 0.5
+  glowAmplitude: 0.5
+  origMatColor: {r: 1, g: 0, b: 0, a: 1}
+  matColor: {r: 0, g: 0, b: 0, a: 0}
+  baseColorValueFadeSpeed: 20
+  colors:
+  - {r: 1, g: 0, b: 0, a: 1}
+  - {r: 0.3915094, g: 1, b: 0.39802155, a: 1}
+  - {r: 0.4292453, g: 0.5974941, b: 1, a: 1}
+  - {r: 0.78821295, g: 0.4481132, b: 1, a: 1}
+  - {r: 0.987248, g: 1, b: 0.4198113, a: 1}
+  currentIndex: 1
+  changeColourTime: 5
 --- !u!1001 &728336646
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -549,7 +648,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4031137260371176, guid: 4ad6e4167cdc6ee469c5151e3fe86a7f, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4031137260371176, guid: 4ad6e4167cdc6ee469c5151e3fe86a7f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -670,7 +769,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4031137260371176, guid: 4ad6e4167cdc6ee469c5151e3fe86a7f, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4031137260371176, guid: 4ad6e4167cdc6ee469c5151e3fe86a7f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -750,6 +849,39 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 0411685ed97aa164aab392a586b94190, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ad6e4167cdc6ee469c5151e3fe86a7f, type: 3}
+--- !u!1 &898842587 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1523978584962194, guid: 4ad6e4167cdc6ee469c5151e3fe86a7f,
+    type: 3}
+  m_PrefabInstance: {fileID: 968930109}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &898842588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 898842587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cde7d3804066a764fad44f58014c0e78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SD: {fileID: 1716626451}
+  bandNum: 1
+  initialGlow: 0.5
+  glowAmplitude: 0.5
+  origMatColor: {r: 1, g: 0, b: 0, a: 1}
+  matColor: {r: 0, g: 0, b: 0, a: 0}
+  baseColorValueFadeSpeed: 20
+  colors:
+  - {r: 1, g: 0, b: 0, a: 1}
+  - {r: 0.3915094, g: 1, b: 0.39802155, a: 1}
+  - {r: 0.4292453, g: 0.5974941, b: 1, a: 1}
+  - {r: 0.78821295, g: 0.4481132, b: 1, a: 1}
+  - {r: 0.987248, g: 1, b: 0.4198113, a: 1}
+  currentIndex: 2
+  changeColourTime: 5
 --- !u!1001 &968930109
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -791,7 +923,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4031137260371176, guid: 4ad6e4167cdc6ee469c5151e3fe86a7f, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4031137260371176, guid: 4ad6e4167cdc6ee469c5151e3fe86a7f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -923,6 +1055,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1277791251
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1277791252}
+  m_Layer: 0
+  m_Name: CameraController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1277791252
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277791251}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 36.20622, y: 5.0469456, z: 4.7565637}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1430640367
 GameObject:
   m_ObjectHideFlags: 0
@@ -958,9 +1120,9 @@ MonoBehaviour:
   points: []
   deletablePoints: []
   nextPoints: []
-  speed: 37.5
+  speed: 75
   destPoint: 0
-  lastRand: 0
+  lastRand: 1
   spawner: {fileID: 1250233911149818, guid: 64c65ddc315a7704aa936db3d1c6b955, type: 3}
   LM: {fileID: 2038590507}
 --- !u!65 &1430640369
@@ -990,7 +1152,6 @@ Transform:
   - {fileID: 1716626450}
   - {fileID: 1745054717}
   - {fileID: 2126641623}
-  - {fileID: 534669905}
   - {fileID: 329413402}
   - {fileID: 2037147611}
   - {fileID: 1502133515}
@@ -1053,6 +1214,7 @@ GameObject:
   - component: {fileID: 1716626450}
   - component: {fileID: 1716626449}
   - component: {fileID: 1716626451}
+  - component: {fileID: 1716626452}
   m_Layer: 0
   m_Name: Justice - D.A.N.C.E. -
   m_TagString: SpectrumData
@@ -1695,6 +1857,28 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  factor: 0
+--- !u!114 &1716626452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716626448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15b0b817bd0bb37499445fb6ebe77b35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
+  bufferSize: 1024
+  gThresh: 0.1
+  onBeat:
+    m_PersistentCalls:
+      m_Calls: []
+  onSpectrum:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1745054716
 GameObject:
   m_ObjectHideFlags: 0
@@ -1851,7 +2035,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1430640372}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &1801298382
 SphereCollider:
@@ -2096,7 +2280,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4031137260371176, guid: 4ad6e4167cdc6ee469c5151e3fe86a7f, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4031137260371176, guid: 4ad6e4167cdc6ee469c5151e3fe86a7f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2191,6 +2375,39 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 0411685ed97aa164aab392a586b94190, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ad6e4167cdc6ee469c5151e3fe86a7f, type: 3}
+--- !u!1 &2117961885 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1523978584962194, guid: 4ad6e4167cdc6ee469c5151e3fe86a7f,
+    type: 3}
+  m_PrefabInstance: {fileID: 728336646}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2117961886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2117961885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cde7d3804066a764fad44f58014c0e78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SD: {fileID: 1716626451}
+  bandNum: 1
+  initialGlow: 0.5
+  glowAmplitude: 0.5
+  origMatColor: {r: 1, g: 0, b: 0, a: 1}
+  matColor: {r: 0, g: 0, b: 0, a: 0}
+  baseColorValueFadeSpeed: 20
+  colors:
+  - {r: 1, g: 0, b: 0, a: 1}
+  - {r: 0.3915094, g: 1, b: 0.39802155, a: 1}
+  - {r: 0.4292453, g: 0.5974941, b: 1, a: 1}
+  - {r: 0.78821295, g: 0.4481132, b: 1, a: 1}
+  - {r: 0.987248, g: 1, b: 0.4198113, a: 1}
+  currentIndex: 3
+  changeColourTime: 5
 --- !u!1 &2126641622
 GameObject:
   m_ObjectHideFlags: 0

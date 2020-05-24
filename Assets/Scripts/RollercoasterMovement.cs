@@ -76,61 +76,54 @@ public class RollercoasterMovement : MonoBehaviour {
 
     IEnumerator arrayAssign ()
     {
-        //Debug.Log("Yes"); // for testing
         timeToSpawn = false;
         if (firstEmbark)
         Destroy(GameObject.FindGameObjectWithTag("deleteableWPs")); //destroys spawners
         deletablePoints = points; //sets current segment to deletable points
-        yield return new WaitForSeconds(Time.deltaTime);
         foreach (GameObject gObj in deletablePoints)
         {
             gObj.GetComponent<WaypointScripter>().endFade(); //untagged points while calling a fade and destroy function on them
-            gObj.transform.tag = ("Untagged");
+            gObj.transform.tag = ("Fading");
         }
-        yield return new WaitForSeconds(Time.deltaTime);
         points.Clear(); //clear points array
-        yield return new WaitForSeconds(Time.deltaTime);
+
         points = nextPoints; //next segment becomes current
-        yield return new WaitForSeconds(Time.deltaTime);
+
         nextPoints.Clear(); // next segment points is emptied
         nextPoints.AddRange(GameObject.FindGameObjectsWithTag("nextPoint")); //next segment is added to the next point array
-        destPoint = 0; 
-        yield return new WaitForSeconds(Time.deltaTime);
-        if (lastRand == 0) //checks land rands position for proper segment placement
-        {
-            pos = GameObject.FindGameObjectWithTag("deleteableWPs").GetComponent<Spawner>().currentPos;
-        }
-        else if (lastRand == 1)
-        {
-            pos = GameObject.FindGameObjectWithTag("deleteableWPs").GetComponent<Spawner>().currentPos;
-        } else if (lastRand == 2)
-        {
-            pos = GameObject.FindGameObjectWithTag("deleteableWPs").GetComponent<Spawner>().currentPos;
-        } else
-        {
-            pos = GameObject.FindGameObjectWithTag("deleteableWPs").GetComponent<Spawner>().currentPos;
-        }
+        destPoint = 0;
+     
+        pos = GameObject.FindGameObjectWithTag("Fading").GetComponentInParent<Spawner>().currentPos;
+        
             
 
-        int rand = Random.Range(0, 4); //random range assign a random segment
+        int rand = Random.Range(1, 4); //random range assign a random segment
         if (rand == 0)
         {
-            GameObject Clone = Instantiate(spawner, new Vector3(pos.x + 1, pos.y, pos.z), Quaternion.identity);
+            GameObject Clone = Instantiate(spawner, new Vector3(pos.x, pos.y, pos.z), Quaternion.identity);
+            Clone.GetComponent<Spawner>().RCM = this.gameObject;
             Clone.GetComponent<Spawner>().ZigZag();
+            
         }
         else if (rand == 1)
         {
             
-            GameObject Clone = Instantiate(spawner, new Vector3(pos.x + 1, pos.y + loopRad, pos.z), Quaternion.identity);
+            GameObject Clone = Instantiate(spawner, new Vector3(pos.x, pos.y + loopRad, pos.z), Quaternion.identity);
+            Clone.GetComponent<Spawner>().RCM = this.gameObject;
             Clone.GetComponent<Spawner>().Loop();
+            
         }  else if (rand == 2)
         { 
-            GameObject Clone = Instantiate(spawner, new Vector3(pos.x + 1, pos.y, pos.z - corkRad), Quaternion.identity);
+            GameObject Clone = Instantiate(spawner, new Vector3(pos.x, pos.y, pos.z - corkRad), Quaternion.identity);
+            Clone.GetComponent<Spawner>().RCM = this.gameObject;
             Clone.GetComponent<Spawner>().Corkscrew();
+            
         } else
         {
             GameObject Clone = Instantiate(spawner, new Vector3(pos.x + 1, pos.y, pos.z + eightLoop), Quaternion.identity);
+            Clone.GetComponent<Spawner>().RCM = this.gameObject;
             Clone.GetComponent<Spawner>().FigureEight();
+            
         }
         yield return new WaitForSeconds(Time.deltaTime);
         LM.nextSegment(); // calls function on line maker for the next segment of roller coaster points

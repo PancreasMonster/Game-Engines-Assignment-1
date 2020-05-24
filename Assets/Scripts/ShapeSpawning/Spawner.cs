@@ -11,6 +11,7 @@ public class Spawner : MonoBehaviour {
     public Vector3 pos, currentPos;
     public bool test, first;
     int num = 0;
+    public GameObject RCM;
 
     // Use this for initialization
     void OnEnable () {
@@ -48,7 +49,9 @@ public class Spawner : MonoBehaviour {
                 num = 0;
             else
                 num++;
+            RCM.GetComponent<RollercoasterMovement>().nextPoints.Add(Clone);
         }
+        
     }
 
     public void Loop()
@@ -77,6 +80,8 @@ public class Spawner : MonoBehaviour {
                 num = 0;
             else
                 num++;
+            if(!first)
+            RCM.GetComponent<RollercoasterMovement>().nextPoints.Add(Clone);
         }
     }
 
@@ -106,6 +111,7 @@ public class Spawner : MonoBehaviour {
                 num = 0;
             else
                 num++;
+            RCM.GetComponent<RollercoasterMovement>().nextPoints.Add(Clone);
         }
     }
 
@@ -135,6 +141,7 @@ public class Spawner : MonoBehaviour {
                 num = 0;
             else
                 num++;
+            RCM.GetComponent<RollercoasterMovement>().nextPoints.Add(Clone);
         }
     }
 

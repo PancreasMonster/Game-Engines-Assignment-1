@@ -24,13 +24,10 @@ public class WaypointScripter : MonoBehaviour {
     IEnumerator FadeInLR() // fades the lines into the scene
     {
 
-        float rate = 1.0f / (SecondsToFade/3);
-
-        for (float x = 0.0f; x <= 1.0f; x += Time.deltaTime * rate)
-        {
-            LR.material.color = new Color(LR.material.color.r, LR.material.color.g, LR.material.color.b, Mathf.Lerp(0, 1, x));
+        
+            LR.material.color = new Color(LR.material.color.r, LR.material.color.g, LR.material.color.b, 1);
             yield return null;
-        }
+        
 
     }
 

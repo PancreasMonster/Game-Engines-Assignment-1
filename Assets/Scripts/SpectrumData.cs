@@ -6,6 +6,7 @@ public class SpectrumData : MonoBehaviour {
 
     AudioSource aud;
     public float[] audSamples = new float[512];
+    public float factor;
 
 	// Use this for initialization
 	void Start () {
