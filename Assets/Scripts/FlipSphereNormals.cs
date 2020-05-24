@@ -8,7 +8,6 @@ public class FlipSphereNormals : MonoBehaviour {
     public float delay;
     bool changeColour = true;
 
-	// Use this for initialization
 	void Start () {
         Mesh mesh = GetComponent<MeshFilter>().mesh;
 
@@ -49,12 +48,4 @@ public class FlipSphereNormals : MonoBehaviour {
         // connect texture to material of GameObject this script is attached to
         GetComponent<Renderer>().material.mainTexture = sphTexture;
     }
-
-    void Update()
-    {
-       
-    }
-
-   
-
 }

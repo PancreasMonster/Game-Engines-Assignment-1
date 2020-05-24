@@ -12,7 +12,7 @@ public class RollercoasterMovement : MonoBehaviour {
     public float speed;
     float loopRad, corkRad, eightLoop; //offsets
     public int destPoint = 0, lastRand; // for randomisation
-    public GameObject spawner, spawner2, spawner3, spawner4;
+    public GameObject spawner;
     public LineMaker LM;
     private bool timeToSpawn = true, firstEmbark = false;
     Vector3 pos;
@@ -27,7 +27,6 @@ public class RollercoasterMovement : MonoBehaviour {
         GameObject[] pointsA = GameObject.FindGameObjectsWithTag("Waypoint"); //assigns first segment to array of current points
         points.AddRange(pointsA);
         StartCoroutine(arraySetup());
-
         GotoNextPoint();
     }
 
@@ -57,7 +56,7 @@ public class RollercoasterMovement : MonoBehaviour {
         corkRad = MS.corkscrewRadius;
         eightLoop = MS.figureEightRadius;
 
-        if (points.Count == 0 && !timeToSpawn) //for the frame when there is no target
+        if (points.Count == 0 && timeToSpawn) //for the frame when there is no target
             return;
 
         transform.position = Vector3.Lerp(transform.position, points[destPoint].transform.position, speed * Time.deltaTime); //moves to target point
@@ -103,35 +102,35 @@ public class RollercoasterMovement : MonoBehaviour {
         }
         else if (lastRand == 1)
         {
-            pos = GameObject.FindGameObjectWithTag("deleteableWPs").GetComponent<Spawner2>().currentPos;
+            pos = GameObject.FindGameObjectWithTag("deleteableWPs").GetComponent<Spawner>().currentPos;
         } else if (lastRand == 2)
         {
-            pos = GameObject.FindGameObjectWithTag("deleteableWPs").GetComponent<Spawner3>().currentPos;
+            pos = GameObject.FindGameObjectWithTag("deleteableWPs").GetComponent<Spawner>().currentPos;
         } else
         {
-            pos = GameObject.FindGameObjectWithTag("deleteableWPs").GetComponent<Spawner4>().currentPos;
+            pos = GameObject.FindGameObjectWithTag("deleteableWPs").GetComponent<Spawner>().currentPos;
         }
             
-        Debug.Log(pos);
+
         int rand = Random.Range(0, 4); //random range assign a random segment
         if (rand == 0)
-        { 
+        {
             GameObject Clone = Instantiate(spawner, new Vector3(pos.x + 1, pos.y, pos.z), Quaternion.identity);
-            Clone.GetComponent<Spawner>().enabled = true;
+            Clone.GetComponent<Spawner>().ZigZag();
         }
         else if (rand == 1)
         {
             
-            GameObject Clone = Instantiate(spawner2, new Vector3(pos.x + 1, pos.y + loopRad, pos.z), Quaternion.identity);
-            Clone.GetComponent<Spawner2>().enabled = true;
+            GameObject Clone = Instantiate(spawner, new Vector3(pos.x + 1, pos.y + loopRad, pos.z), Quaternion.identity);
+            Clone.GetComponent<Spawner>().Loop();
         }  else if (rand == 2)
         { 
-            GameObject Clone = Instantiate(spawner3, new Vector3(pos.x + 1, pos.y, pos.z - corkRad), Quaternion.identity);
-            Clone.GetComponent<Spawner3>().enabled = true;
+            GameObject Clone = Instantiate(spawner, new Vector3(pos.x + 1, pos.y, pos.z - corkRad), Quaternion.identity);
+            Clone.GetComponent<Spawner>().Corkscrew();
         } else
         {
-            GameObject Clone = Instantiate(spawner4, new Vector3(pos.x + 1, pos.y, pos.z + eightLoop), Quaternion.identity);
-            Clone.GetComponent<Spawner4>().enabled = true;
+            GameObject Clone = Instantiate(spawner, new Vector3(pos.x + 1, pos.y, pos.z + eightLoop), Quaternion.identity);
+            Clone.GetComponent<Spawner>().FigureEight();
         }
         yield return new WaitForSeconds(Time.deltaTime);
         LM.nextSegment(); // calls function on line maker for the next segment of roller coaster points
@@ -143,7 +142,7 @@ public class RollercoasterMovement : MonoBehaviour {
 
     IEnumerator arraySetup ()
     {
-        yield return new WaitForSeconds(Time.deltaTime);
+        yield return null;
         nextPoints.AddRange(GameObject.FindGameObjectsWithTag("nextPoint")); //must wait a frame to assign this to the array of next points
     }
 
