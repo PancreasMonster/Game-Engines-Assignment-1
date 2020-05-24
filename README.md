@@ -1,4 +1,4 @@
-# Game-Engines-Assignment-1
+# Game Engines Assignment - Audio Visualiser
 This assignment will aim to develop a rollercoaster ride that has audio reactive moments with some procedural generation.
 
 ## Introduction 
