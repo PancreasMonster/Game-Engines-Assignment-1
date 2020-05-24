@@ -1032,14 +1032,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a6bf6ccc117f574a9775b645eaf8d52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zigZagLenght: 77
+  zigZagLenght: 32
   loopLenght: 392
-  corkscrewLenght: 430
-  figureEightLenght: 444
-  corkscrewRadius: 7.38
-  corkscrewNum: 5.94
-  figureEightRadius: 9.59
-  figureEightNum: 8.2
+  corkscrewLenght: 290
+  figureEightLenght: 737
+  corkscrewRadius: 3.53
+  corkscrewNum: 1.43
+  figureEightRadius: 3.28
+  figureEightNum: 9.69
   loopRadius: 42.7
 --- !u!4 &1011705672
 Transform:
