@@ -147,7 +147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SD: {fileID: 1716626451}
   bandNum: 1
-  initialGlow: 1
+  initialGlow: 3
   glowAmplitude: 0
   origMatColor: {r: 1, g: 0, b: 0, a: 1}
   matColor: {r: 0, g: 0, b: 0, a: 0}
@@ -383,17 +383,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SD: {fileID: 1716626451}
   bandNum: 1
-  initialGlow: 1
+  initialGlow: 3
   glowAmplitude: 0
   origMatColor: {r: 1, g: 0, b: 0, a: 1}
   matColor: {r: 0, g: 0, b: 0, a: 0}
   baseColorValueFadeSpeed: 20
   colors:
-  - {r: 1, g: 0, b: 0, a: 1}
-  - {r: 0.3915094, g: 1, b: 0.39802155, a: 1}
-  - {r: 0.4292453, g: 0.5974941, b: 1, a: 1}
-  - {r: 0.78821295, g: 0.4481132, b: 1, a: 1}
-  - {r: 0.987248, g: 1, b: 0.4198113, a: 1}
+  - {r: 0.639027, g: 0.3915094, b: 1, a: 1}
+  - {r: 0.639027, g: 0.3915094, b: 1, a: 1}
   currentIndex: 4
   changeColourTime: 5
 --- !u!1 &534669902
@@ -594,17 +591,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SD: {fileID: 1716626451}
   bandNum: 1
-  initialGlow: 1
+  initialGlow: 3
   glowAmplitude: 0
   origMatColor: {r: 1, g: 0, b: 0, a: 1}
   matColor: {r: 0, g: 0, b: 0, a: 0}
   baseColorValueFadeSpeed: 20
   colors:
-  - {r: 1, g: 0, b: 0, a: 1}
-  - {r: 0.3915094, g: 1, b: 0.39802155, a: 1}
-  - {r: 0.4292453, g: 0.5974941, b: 1, a: 1}
-  - {r: 0.78821295, g: 0.4481132, b: 1, a: 1}
-  - {r: 0.987248, g: 1, b: 0.4198113, a: 1}
+  - {r: 0.639027, g: 0.3915094, b: 1, a: 1}
+  - {r: 0.639027, g: 0.3915094, b: 1, a: 1}
   currentIndex: 1
   changeColourTime: 5
 --- !u!1001 &728336646
@@ -617,6 +611,10 @@ PrefabInstance:
     - target: {fileID: 1523978584962194, guid: 4ad6e4167cdc6ee469c5151e3fe86a7f, type: 3}
       propertyPath: m_Name
       value: Coaster Particle System (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1523978584962194, guid: 4ad6e4167cdc6ee469c5151e3fe86a7f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4031137260371176, guid: 4ad6e4167cdc6ee469c5151e3fe86a7f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -738,6 +736,10 @@ PrefabInstance:
     - target: {fileID: 1523978584962194, guid: 4ad6e4167cdc6ee469c5151e3fe86a7f, type: 3}
       propertyPath: m_Name
       value: Coaster Particle System (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1523978584962194, guid: 4ad6e4167cdc6ee469c5151e3fe86a7f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4031137260371176, guid: 4ad6e4167cdc6ee469c5151e3fe86a7f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -869,17 +871,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SD: {fileID: 1716626451}
   bandNum: 1
-  initialGlow: 1
+  initialGlow: 3
   glowAmplitude: 0
   origMatColor: {r: 1, g: 0, b: 0, a: 1}
   matColor: {r: 0, g: 0, b: 0, a: 0}
   baseColorValueFadeSpeed: 20
   colors:
-  - {r: 1, g: 0, b: 0, a: 1}
-  - {r: 0.3915094, g: 1, b: 0.39802155, a: 1}
-  - {r: 0.4292453, g: 0.5974941, b: 1, a: 1}
-  - {r: 0.78821295, g: 0.4481132, b: 1, a: 1}
-  - {r: 0.987248, g: 1, b: 0.4198113, a: 1}
+  - {r: 0.639027, g: 0.3915094, b: 1, a: 1}
+  - {r: 0.639027, g: 0.3915094, b: 1, a: 1}
   currentIndex: 2
   changeColourTime: 5
 --- !u!1001 &968930109
@@ -892,6 +891,10 @@ PrefabInstance:
     - target: {fileID: 1523978584962194, guid: 4ad6e4167cdc6ee469c5151e3fe86a7f, type: 3}
       propertyPath: m_Name
       value: Coaster Particle System (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1523978584962194, guid: 4ad6e4167cdc6ee469c5151e3fe86a7f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4031137260371176, guid: 4ad6e4167cdc6ee469c5151e3fe86a7f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1032,13 +1035,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a6bf6ccc117f574a9775b645eaf8d52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zigZagLenght: 32
-  loopLenght: 392
-  corkscrewLenght: 290
+  zigZagLenght: 840
+  loopLenght: 845
+  corkscrewLenght: 856
   figureEightLenght: 737
-  corkscrewRadius: 3.53
-  corkscrewNum: 1.43
-  figureEightRadius: 3.28
+  corkscrewRadius: 8.24
+  corkscrewNum: 8.33
+  figureEightRadius: 9.16
   figureEightNum: 9.69
   loopRadius: 42.7
 --- !u!4 &1011705672
@@ -1190,7 +1193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 738a88ce6418cc346a98651d310430a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spin: 0
+  spin: 1
   speed: 40
 --- !u!4 &1502133515 stripped
 Transform:
@@ -1923,7 +1926,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1745054716}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6cc435edd59b77842abb593b9a80e427, type: 3}
   m_Name: 
@@ -1998,7 +2001,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1745054716}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 541a01ede6988da4fbddeced591d455b, type: 3}
   m_Name: 
@@ -2012,7 +2015,7 @@ VideoPlayer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1745054716}
-  m_Enabled: 1
+  m_Enabled: 0
   m_VideoClip: {fileID: 32900000, guid: d83012aaa177a874cb6a4a0cf8f43fe0, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
@@ -2067,7 +2070,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1801298380}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.37, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1430640372}
@@ -2167,7 +2170,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1887506241
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2389,6 +2392,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   linePoints: []
+  shaderLR: {fileID: 2100000, guid: 84e1a5b3e04193949b0e5e8800bb4e1a, type: 2}
 --- !u!4 &2038590508
 Transform:
   m_ObjectHideFlags: 0
@@ -2413,6 +2417,10 @@ PrefabInstance:
     - target: {fileID: 1523978584962194, guid: 4ad6e4167cdc6ee469c5151e3fe86a7f, type: 3}
       propertyPath: m_Name
       value: Coaster Particle System (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1523978584962194, guid: 4ad6e4167cdc6ee469c5151e3fe86a7f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4031137260371176, guid: 4ad6e4167cdc6ee469c5151e3fe86a7f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2559,17 +2567,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SD: {fileID: 1716626451}
   bandNum: 1
-  initialGlow: 1
+  initialGlow: 3
   glowAmplitude: 0
   origMatColor: {r: 1, g: 0, b: 0, a: 1}
   matColor: {r: 0, g: 0, b: 0, a: 0}
   baseColorValueFadeSpeed: 20
   colors:
-  - {r: 1, g: 0, b: 0, a: 1}
-  - {r: 0.3915094, g: 1, b: 0.39802155, a: 1}
-  - {r: 0.4292453, g: 0.5974941, b: 1, a: 1}
-  - {r: 0.78821295, g: 0.4481132, b: 1, a: 1}
-  - {r: 0.987248, g: 1, b: 0.4198113, a: 1}
+  - {r: 0.639027, g: 0.3915094, b: 1, a: 1}
+  - {r: 0.639027, g: 0.3915094, b: 1, a: 1}
   currentIndex: 3
   changeColourTime: 5
 --- !u!1 &2126641622

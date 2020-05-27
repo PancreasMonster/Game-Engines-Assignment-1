@@ -97,10 +97,10 @@ public class RollercoasterMovement : MonoBehaviour {
         
             
 
-        int rand = Random.Range(1, 4); //random range assign a random segment
+        int rand = Random.Range(1, 1); //random range assign a random segment
         if (rand == 0)
         {
-            GameObject Clone = Instantiate(spawner, new Vector3(pos.x, pos.y, pos.z), Quaternion.identity);
+            GameObject Clone = Instantiate(spawner, new Vector3(pos.x + 1, pos.y, pos.z), Quaternion.identity);
             Clone.GetComponent<Spawner>().RCM = this.gameObject;
             Clone.GetComponent<Spawner>().ZigZag();
             
@@ -114,7 +114,7 @@ public class RollercoasterMovement : MonoBehaviour {
             
         }  else if (rand == 2)
         { 
-            GameObject Clone = Instantiate(spawner, new Vector3(pos.x, pos.y, pos.z - corkRad), Quaternion.identity);
+            GameObject Clone = Instantiate(spawner, new Vector3(pos.x + 1, pos.y, pos.z - corkRad), Quaternion.identity);
             Clone.GetComponent<Spawner>().RCM = this.gameObject;
             Clone.GetComponent<Spawner>().Corkscrew();
             

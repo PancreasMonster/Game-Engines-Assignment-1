@@ -10,7 +10,7 @@ public class Spawner : MonoBehaviour {
     public GameObject waypoint, spawner;
     public Vector3 pos, currentPos;
     public bool test, first;
-    int num = 0;
+    int num = 0, iterator = 1;
     public GameObject RCM;
 
     // Use this for initialization
@@ -45,10 +45,11 @@ public class Spawner : MonoBehaviour {
                 GameObject Spawner1 = Instantiate(spawner, new Vector3(pos.x + 1, pos.y, pos.z), Quaternion.identity);
                 Spawner1.GetComponent<Spawner>().enabled = true;
             }
-            if (num == 3)
-                num = 0;
-            else
-                num++;
+            if (num == 8 && iterator == 1)
+                iterator = -1;
+            else if (num == 0 && iterator == -1)
+                iterator = 1;
+            num += iterator;
             RCM.GetComponent<RollercoasterMovement>().nextPoints.Add(Clone);
         }
         
@@ -76,11 +77,12 @@ public class Spawner : MonoBehaviour {
                 GameObject Spawner1 = Instantiate(spawner, new Vector3(pos.x + 1, pos.y + radius, pos.z), Quaternion.identity);
                 Spawner1.GetComponent<Spawner>().enabled = true;
             }
-            if (num == 3)
-                num = 0;
-            else
-                num++;
-            if(!first)
+            if (num == 8 && iterator == 1)
+                iterator = -1;
+            else if (num == 0 && iterator == -1)
+                iterator = 1;
+            num += iterator;
+            if (!first)
             RCM.GetComponent<RollercoasterMovement>().nextPoints.Add(Clone);
         }
     }
@@ -107,10 +109,11 @@ public class Spawner : MonoBehaviour {
                 GameObject Spawner1 = Instantiate(spawner, new Vector3(pos.x + 1, pos.y + radius, pos.z), Quaternion.identity);
                 Spawner1.GetComponent<Spawner>().enabled = true; //for the beginning 
             }
-            if (num == 3)
-                num = 0;
-            else
-                num++;
+            if (num == 8 && iterator == 1)
+                iterator = -1;
+            else if (num == 0 && iterator == -1)
+                iterator = 1;
+            num += iterator;
             RCM.GetComponent<RollercoasterMovement>().nextPoints.Add(Clone);
         }
     }
@@ -137,10 +140,11 @@ public class Spawner : MonoBehaviour {
                 GameObject Spawner1 = Instantiate(spawner, new Vector3(pos.x + 1, pos.y + radius, pos.z), Quaternion.identity);
                 Spawner1.GetComponent<Spawner>().enabled = true;
             }
-            if (num == 3)
-                num = 0;
-            else
-                num++;
+            if (num == 8 && iterator == 1)
+                iterator = -1;
+            else if (num == 0 && iterator == -1)
+                iterator = 1;
+            num += iterator;
             RCM.GetComponent<RollercoasterMovement>().nextPoints.Add(Clone);
         }
     }

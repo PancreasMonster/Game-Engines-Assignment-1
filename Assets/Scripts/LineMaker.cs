@@ -5,13 +5,12 @@ using UnityEngine;
 public class LineMaker : MonoBehaviour {
 
     public List<GameObject> linePoints = new List<GameObject>();
-    Shader shaderLR; //shader for prettier lines
+    public Material shaderLR; //shader for prettier lines
 
 
 
     // Use this for initialization
-    void Start () {
-        shaderLR = Shader.Find("UI/Default"); //assigns the shader to a default one 
+    void Start () {      
         StartCoroutine(startList());
     }
 	
@@ -37,7 +36,7 @@ public class LineMaker : MonoBehaviour {
                     lr.SetPosition(1, linePoints[i - 1].transform.position); //assigns the second point to the previous point
                     lr.colorGradient.mode = GradientMode.Fixed; //one colour for the lines
                     lr.material.color = Random.ColorHSV(.5f, 1, .5f, 1, .5f, 1, 1, 1); //assigns a random colour
-                    lr.material.shader = shaderLR; //better looking shader
+                    lr.material = shaderLR; //better looking shader
                     lr.endWidth = .5f; //assign an initial width to the lines
                     lr.startWidth = .5f;
                 }
