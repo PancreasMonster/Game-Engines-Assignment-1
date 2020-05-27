@@ -1000,6 +1000,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1011705672}
   - component: {fileID: 1011705671}
+  - component: {fileID: 1011705673}
   m_Layer: 0
   m_Name: MasterController
   m_TagString: Master
@@ -1042,6 +1043,49 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1011705673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1011705670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 621567455fd1c4ceb811cc8a00b6a1a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_NotificationBehavior: 0
+  m_MaxPlayerCount: 1
+  m_AllowJoining: 1
+  m_JoinBehavior: 2
+  m_PlayerJoinedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_PlayerLeftEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_JoinAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: 
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+    m_Reference: {fileID: 0}
+  m_PlayerPrefab: {fileID: 0}
+  m_SplitScreen: 0
+  m_MaintainAspectRatioInSplitScreen: 0
+  m_FixedNumberOfSplitScreens: -1
+  m_SplitScreenRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
 --- !u!1 &1277791251
 GameObject:
   m_ObjectHideFlags: 0
@@ -1052,6 +1096,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1277791252}
   - component: {fileID: 1277791253}
+  - component: {fileID: 1277791254}
   m_Layer: 0
   m_Name: CameraController
   m_TagString: Untagged
@@ -1088,8 +1133,39 @@ MonoBehaviour:
   turnSpeed: 4
   lerpSpeed: 30
   cam: {fileID: 534669905}
-  spherePos: {fileID: 1801298381}
+  spherePos: {fileID: 1430640372}
   offset: {x: 0, y: 10, z: -26}
+--- !u!114 &1277791254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277791251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 4e00b3638eca47843befe7b3d358400e,
+    type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Camera
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &1430640367
 GameObject:
   m_ObjectHideFlags: 0
@@ -1194,7 +1270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 738a88ce6418cc346a98651d310430a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spin: 1
+  spin: 0
   speed: 40
 --- !u!4 &1502133515 stripped
 Transform:

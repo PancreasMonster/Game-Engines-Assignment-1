@@ -15,17 +15,7 @@ public class SpinningSkySphere : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            if (!spin)
-            {
-                spin = true;
-            }
-            else
-            {
-                spin = false;
-            }
-        }
+       
 
         if (spin)
         {

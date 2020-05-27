@@ -1,0 +1,33 @@
+{
+    "name": "CameraMovement",
+    "maps": [
+        {
+            "name": "Camera",
+            "id": "de0c0984-5e00-4a6a-9ea6-8ac2b448d060",
+            "actions": [
+                {
+                    "name": "RightStick",
+                    "type": "Value",
+                    "id": "d82d1489-f8aa-4b67-b825-ce1912ba78e0",
+                    "expectedControlType": "Stick",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "4901a16a-2302-4295-9538-c6ba2391c1c3",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RightStick",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

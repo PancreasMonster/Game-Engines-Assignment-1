@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class CameraController : MonoBehaviour
 {
@@ -19,50 +20,15 @@ public class CameraController : MonoBehaviour
     }
 
     Vector2 rightStick;
-    float leftBumper;
 
-   /* private void OnRightStickClick(InputValue value)
-    {
-
-        lockedBehind = !lockedBehind;
-        offset = origPos;
-        offset = Quaternion.AngleAxis(player.transform.localEulerAngles.y - 180, Vector3.up) * offset;
-        
-        origPos = new Vector3(origPos.x, origPos.y, -origPos.z);
-        jumpOffset = new Vector3(jumpOffset.x, jumpOffset.y, -jumpOffset.z);
-    }
-
-    private void OnRightStickRelease(InputValue value)
-    {
-
-        lockedBehind = !lockedBehind;
-        offset = origPos;
-        offset = Quaternion.AngleAxis(player.transform.localEulerAngles.y - 180, Vector3.up) * offset;
-        
-        origPos = new Vector3(origPos.x, origPos.y, -origPos.z);
-        jumpOffset = new Vector3(jumpOffset.x, jumpOffset.y, -jumpOffset.z);
-    }
 
     private void OnRightStick(InputValue value)
     {
 
         rightStick = value.Get<Vector2>();
-
+        
     }
 
-    private void OnLeftBumper(InputValue value)
-    {
-
-        leftBumper = 1;
-
-    }
-
-    private void OnLeftBumperRelease(InputValue value)
-    {
-
-        leftBumper = 0;
-
-    }*/
 
     /* private void Update()
      {
@@ -99,44 +65,24 @@ public class CameraController : MonoBehaviour
 
     void FixedUpdate()
     {
+
        
-            
-            //tempOffset = Quaternion.AngleAxis(player.transform.localEulerAngles.y - 180, Vector3.up) * tempOffset;
-            // Vector3 wallOffset = fo.hit.normal;
-            /* Vector3 wallOffsetY = fo.hit.normal;
 
-            if (Vector3.Dot(Vector3.forward, fo.hit.normal.normalized) > .8f || Vector3.Dot(Vector3.forward, fo.hit.normal.normalized) < -.8f)
-            {
-                wallOffset = Quaternion.AngleAxis(-90, Vector3.up) * wallOffset;
-
-            }
-
-            if (Vector3.Dot(Vector3.up, fo.hit.normal) < -.8f || Vector3.Dot(Vector3.up, fo.hit.normal) > .8f)
-            {
-                wallOffsetY = Quaternion.AngleAxis(90, Vector3.forward) * wallOffsetY;
-            }
-
-            if (Vector3.Dot(Vector3.up, fo.hit.normal) < -.8f)
-            {
-
-                wallTransition = Mathf.Lerp(wallTransition, -180, lerpSpeed * .3f * Time.deltaTime);
-                tempOffset = new Vector3(tempOffset.x, -tempOffset.y, tempOffset.z);
-            }
-            else
-            {
-                wallTransition = Mathf.Lerp(wallTransition, 0, lerpSpeed * .3f * Time.deltaTime);
-            }
-            tempOffset = Quaternion.AngleAxis(-rotateAmount, wallOffset) * tempOffset;
-            tempOffset = Quaternion.AngleAxis(-yRotateAmount, wallOffsetY) * tempOffset;*/
+        offset = Quaternion.AngleAxis(turnSpeed * rightStick.x, Vector3.up) * offset;
+       
 
             
             
 
-            cam.transform.position = Vector3.Lerp(cam.transform.position, spherePos.position + offset, lerpSpeed * Time.deltaTime);
+        cam.transform.position = Vector3.Lerp(cam.transform.position, spherePos.transform.TransformPoint(offset), lerpSpeed * Time.deltaTime);
 
-            cam.transform.LookAt(spherePos.position);    
+
+        Vector3 dir = spherePos.transform.position - cam.transform.position;
+        dir.Normalize();
+
+        cam.transform.rotation = Quaternion.Slerp(cam.transform.rotation, Quaternion.LookRotation(dir), lerpSpeed * Time.deltaTime);    
                     
-        }
+    }
 
 
     }

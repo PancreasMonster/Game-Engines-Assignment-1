@@ -50,7 +50,7 @@ public class RollercoasterMovement : MonoBehaviour {
     }
 
 
-    void Update()
+    void FixedUpdate()
     {
         loopRad = MS.loopRadius;
         corkRad = MS.corkscrewRadius;
@@ -60,6 +60,11 @@ public class RollercoasterMovement : MonoBehaviour {
             return;
 
         transform.position = Vector3.Lerp(transform.position, points[destPoint].transform.position, speed * Time.deltaTime); //moves to target point
+
+        if(destPoint+1 < points.Count)
+        transform.LookAt(points[destPoint+1].transform.position);
+        else
+        transform.LookAt(points[destPoint].transform.position);
 
         if (destPoint == points.Count - 1 && timeToSpawn)
         {
