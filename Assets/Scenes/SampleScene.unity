@@ -1201,7 +1201,7 @@ MonoBehaviour:
   points: []
   deletablePoints: []
   nextPoints: []
-  speed: 75
+  speed: 60
   destPoint: 0
   lastRand: 1
   spawner: {fileID: 1250233911149818, guid: 64c65ddc315a7704aa936db3d1c6b955, type: 3}
@@ -1265,7 +1265,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1430640367}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 738a88ce6418cc346a98651d310430a5, type: 3}
   m_Name: 
@@ -1313,9 +1313,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 081f0c004676298469b86bb64e514163, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 37652d996cdd6a842938b1438f33b595, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1946,7 +1946,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1716626448}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 15b0b817bd0bb37499445fb6ebe77b35, type: 3}
   m_Name: 

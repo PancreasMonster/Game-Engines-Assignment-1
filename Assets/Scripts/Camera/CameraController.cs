@@ -15,8 +15,10 @@ public class CameraController : MonoBehaviour
     void Start()
     {
         //offset = new Vector3(0, 10, -26);
-       // origPos = offset;
-      //  wheels = player.GetComponentsInChildren<WheelCollider>();
+        // origPos = offset;
+        //  wheels = player.GetComponentsInChildren<WheelCollider>();
+
+        Cursor.visible = false;
     }
 
     Vector2 rightStick;
